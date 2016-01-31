@@ -13,7 +13,7 @@ function wrapCallback(cb){
 
 function watch(glob, opt, cb) {
   if (typeof opt === 'function') {
-    task = opt;
+    cb = opt;
     opt = {};
   }
 
