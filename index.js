@@ -15,14 +15,23 @@ function watch(glob, opt, cb) {
     opt.ignoreInitial = true;
   }
 
+  var queued = false;
   var running = false;
 
   function runComplete(err) {
     // TODO: report errors
     running = false;
+
+    // If we have a run queued, start onChange again
+    if (queued) {
+      queued = false;
+      onChange();
+    }
   }
 
-  function onChange(path) {
+  function onChange() {
+    queued = true;
+
     if (running) {
       return;
     }
