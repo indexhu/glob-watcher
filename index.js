@@ -11,7 +11,7 @@ function wrapCallback(cb){
   return onChange;
 }
 
-function watch(glob, opts, cb) {
+function watch(glob, opt, cb) {
   if (typeof opt === 'function') {
     task = opt;
     opt = {};
