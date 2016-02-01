@@ -30,9 +30,8 @@ function watch(glob, opt, cb) {
   }
 
   function onChange() {
-    queued = true;
-
     if (running) {
+      queued = true;
       return;
     }
 
