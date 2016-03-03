@@ -11,7 +11,7 @@
     "lib"
   ],
   "dependencies": {
-    "gaze": "^0.5.2"
+    "gaze": "https://github.com/shama/gaze/tarball/dc5fbbead1b7b4c6894e8000084c96534f4b45c0"
   },
   "devDependencies": {
     "mocha": "^2.0.1",
